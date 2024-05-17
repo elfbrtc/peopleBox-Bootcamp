@@ -36,7 +36,7 @@ $yeni_film = array(
 $filmler["0"] = $yeni_film;
 
 //1. ve 2.madde
-function formatAcıklama($aciklama) {
+function formatAciklama($aciklama) {
     $kisaAciklama = substr(ucfirst(strtolower($aciklama)), 0, 50);
     return $kisaAciklama . "...";
 }
@@ -64,12 +64,11 @@ define('BASLIK', 'Film Kategorileri');
 </head>
 <body>
     <div class="container my-3">
-    <div class="row">
+        <div class="row">
             <div class="col-12">
-            <h1><?php echo BASLIK; ?></h1>
+                <h1><?php echo BASLIK; ?></h1>
             </div>
         </div>
-        <div class="row">
         <div class="row">
             <div class="col-3">
                 <ul class="list-group">
@@ -89,40 +88,16 @@ define('BASLIK', 'Film Kategorileri');
                         <div class="col-9">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                <a href="<?php echo createUrl($filmler["1"]["baslik"]); ?>" style="text-decoration: none; color: inherit;"><?php echo $filmler["1"]["baslik"]?>
-                            </h5>
+                                    <a href="<?php echo createUrl($filmler["1"]["baslik"]); ?>" style="text-decoration: none; color: inherit;"><?php echo $filmler["1"]["baslik"]; ?></a>
+                                </h5>
                                 <p class="card-text">
-                                <?php echo formatAcıklama($filmler["1"]["aciklama"])?>
+                                    <?php echo formatAciklama($filmler["1"]["aciklama"]); ?>
                                 </p>
                                 <div>
                                     <span class="badge bg-success">Yapım Tarihi: 03.12.2021</span>
-                                    <span class="badge bg-success"><?php echo $filmler["1"]["yorumSayisi"]?></span>
-                                    <span class="badge bg-success"><?php echo $filmler["1"]["begeniSayisi"]?></span>
-                                    <span class="badge bg-success"><?php echo $filmler["1"]["vizyon"]?></span>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-3">
-                        <?php echo "<img class=\"img-fluid\" src=\"img/{$filmler["2"]["resim"]}\">" ?>
-                        </div>
-                        <div class="col-9">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                <a href="<?php echo createUrl($filmler["2"]["baslik"]); ?>" style="text-decoration: none; color: inherit;"><?php echo $filmler["2"]["baslik"]?>
-                            </h5>
-                                <p class="card-text">
-                                <?php echo formatAcıklama($filmler["2"]["aciklama"])?>
-                                </p>
-                                <div>
-                                    <span class="badge bg-success">Yapım Tarihi: 03.12.2021</span>
-                                    <span class="badge bg-success"><?php echo $filmler["2"]["yorumSayisi"]?></span>
-                                    <span class="badge bg-success"><?php echo $filmler["2"]["begeniSayisi"]?></span>
-                                    <span class="badge bg-success"><?php echo $filmler["2"]["vizyon"]?></span>
+                                    <span class="badge bg-success"><?php echo $filmler["1"]["yorumSayisi"]; ?></span>
+                                    <span class="badge bg-success"><?php echo $filmler["1"]["begeniSayisi"]; ?></span>
+                                    <span class="badge bg-success"><?php echo $filmler["1"]["vizyon"]; ?></span>
                                 </div>
                             </div>
                         </div>
@@ -131,21 +106,44 @@ define('BASLIK', 'Film Kategorileri');
                 <div class="card mb-3">
                     <div class="row">
                         <div class="col-3">
-                        <?php echo "<img class=\"img-fluid\" src=\"img/{$filmler["0"]["resim"]}\">" ?>
+                            <?php echo "<img class=\"img-fluid\" src=\"img/{$filmler["2"]["resim"]}\">" ?>
                         </div>
                         <div class="col-9">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                <a href="<?php echo createUrl($filmler["0"]["baslik"]); ?>" style="text-decoration: none; color: inherit;"><?php echo $filmler["0"]["baslik"]?>
-                            </h5>
+                                    <a href="<?php echo createUrl($filmler["2"]["baslik"]); ?>" style="text-decoration: none; color: inherit;"><?php echo $filmler["2"]["baslik"]; ?></a>
+                                </h5>
                                 <p class="card-text">
-                                <?php echo formatAcıklama($filmler["0"]["aciklama"])?>
+                                    <?php echo formatAciklama($filmler["2"]["aciklama"]); ?>
                                 </p>
                                 <div>
                                     <span class="badge bg-success">Yapım Tarihi: 03.12.2021</span>
-                                    <span class="badge bg-success"><?php echo $filmler["0"]["yorumSayisi"]?></span>
-                                    <span class="badge bg-success"><?php echo $filmler["0"]["begeniSayisi"]?></span>
-                                    <span class="badge bg-success"><?php echo $filmler["0"]["vizyon"]?></span>
+                                    <span class="badge bg-success"><?php echo $filmler["2"]["yorumSayisi"]; ?></span>
+                                    <span class="badge bg-success"><?php echo $filmler["2"]["begeniSayisi"]; ?></span>
+                                    <span class="badge bg-success"><?php echo $filmler["2"]["vizyon"]; ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="row">
+                        <div class="col-3">
+                            <?php echo "<img class=\"img-fluid\" src=\"img/{$filmler["0"]["resim"]}\">" ?>
+                        </div>
+                        <div class="col-9">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="<?php echo createUrl($filmler["0"]["baslik"]); ?>" style="text-decoration: none; color: inherit;"><?php echo $filmler["0"]["baslik"]; ?></a>
+                                </h5>
+                                <p class="card-text">
+                                    <?php echo formatAciklama($filmler["0"]["aciklama"]); ?>
+                                </p>
+                                <div>
+                                    <span class="badge bg-success">Yapım Tarihi: 03.12.2021</span>
+                                    <span class="badge bg-success"><?php echo $filmler["0"]["yorumSayisi"]; ?></span>
+                                    <span class="badge bg-success"><?php echo $filmler["0"]["begeniSayisi"]; ?></span>
+                                    <span class="badge bg-success"><?php echo $filmler["0"]["vizyon"]; ?></span>
                                 </div>
                             </div>
                         </div>
