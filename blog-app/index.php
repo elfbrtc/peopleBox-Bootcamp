@@ -92,7 +92,7 @@ define('BASLIK', 'Film Kategorileri');
                                 <a href="<?php echo createUrl($filmler["1"]["baslik"]); ?>" style="text-decoration: none; color: inherit;"><?php echo $filmler["1"]["baslik"]?>
                             </h5>
                                 <p class="card-text">
-                                <?php echo formatDescription($filmler["1"]["aciklama"])?>
+                                <?php echo formatAcıklama($filmler["1"]["aciklama"])?>
                                 </p>
                                 <div>
                                     <span class="badge bg-success">Yapım Tarihi: 03.12.2021</span>
@@ -116,7 +116,7 @@ define('BASLIK', 'Film Kategorileri');
                                 <a href="<?php echo createUrl($filmler["2"]["baslik"]); ?>" style="text-decoration: none; color: inherit;"><?php echo $filmler["2"]["baslik"]?>
                             </h5>
                                 <p class="card-text">
-                                <?php echo formatDescription($filmler["2"]["aciklama"])?>
+                                <?php echo formatAcıklama($filmler["2"]["aciklama"])?>
                                 </p>
                                 <div>
                                     <span class="badge bg-success">Yapım Tarihi: 03.12.2021</span>
@@ -139,7 +139,7 @@ define('BASLIK', 'Film Kategorileri');
                                 <a href="<?php echo createUrl($filmler["0"]["baslik"]); ?>" style="text-decoration: none; color: inherit;"><?php echo $filmler["0"]["baslik"]?>
                             </h5>
                                 <p class="card-text">
-                                <?php echo formatDescription($filmler["0"]["aciklama"])?>
+                                <?php echo formatAcıklama($filmler["0"]["aciklama"])?>
                                 </p>
                                 <div>
                                     <span class="badge bg-success">Yapım Tarihi: 03.12.2021</span>
