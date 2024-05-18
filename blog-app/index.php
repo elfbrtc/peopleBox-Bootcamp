@@ -80,75 +80,37 @@ define('BASLIK', 'Film Kategorileri');
                 </ul>
             </div>
             <div class="col-9">
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-3">
-                            <?php echo "<img class=\"img-fluid\" src=\"img/{$filmler["1"]["resim"]}\">" ?>
-                        </div>
-                        <div class="col-9">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <a href="<?php echo createUrl($filmler["1"]["baslik"]); ?>" style="text-decoration: none; color: inherit;"><?php echo $filmler["1"]["baslik"]; ?></a>
-                                </h5>
-                                <p class="card-text">
-                                    <?php echo formatAciklama($filmler["1"]["aciklama"]); ?>
-                                </p>
-                                <div>
-                                    <span class="badge bg-success">Yapım Tarihi: 03.12.2021</span>
-                                    <span class="badge bg-success"><?php echo $filmler["1"]["yorumSayisi"]; ?></span>
-                                    <span class="badge bg-success"><?php echo $filmler["1"]["begeniSayisi"]; ?></span>
-                                    <span class="badge bg-success"><?php echo $filmler["1"]["vizyon"]; ?></span>
+                <?php
+                foreach ($filmler as $film) {
+                    ?>
+                    <div class="card mb-3">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="img-fluid" src="img/<?php echo $film["resim"]; ?>">
+                            </div>
+                            <div class="col-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="<?php echo createUrl($film["baslik"]); ?>" style="text-decoration: none; color: inherit;">
+                                            <?php echo $film["baslik"]; ?>
+                                        </a>
+                                    </h5>
+                                    <p class="card-text">
+                                        <?php echo formatAciklama($film["aciklama"]); ?>
+                                    </p>
+                                    <div>
+                                        <span class="badge bg-success">Yapım Tarihi: 03.12.2021</span>
+                                        <span class="badge bg-success"><?php echo $film["yorumSayisi"]; ?></span>
+                                        <span class="badge bg-success"><?php echo $film["begeniSayisi"]; ?></span>
+                                        <span class="badge bg-success"><?php echo $film["vizyon"]; ?></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-3">
-                            <?php echo "<img class=\"img-fluid\" src=\"img/{$filmler["2"]["resim"]}\">" ?>
-                        </div>
-                        <div class="col-9">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <a href="<?php echo createUrl($filmler["2"]["baslik"]); ?>" style="text-decoration: none; color: inherit;"><?php echo $filmler["2"]["baslik"]; ?></a>
-                                </h5>
-                                <p class="card-text">
-                                    <?php echo formatAciklama($filmler["2"]["aciklama"]); ?>
-                                </p>
-                                <div>
-                                    <span class="badge bg-success">Yapım Tarihi: 03.12.2021</span>
-                                    <span class="badge bg-success"><?php echo $filmler["2"]["yorumSayisi"]; ?></span>
-                                    <span class="badge bg-success"><?php echo $filmler["2"]["begeniSayisi"]; ?></span>
-                                    <span class="badge bg-success"><?php echo $filmler["2"]["vizyon"]; ?></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-3">
-                            <?php echo "<img class=\"img-fluid\" src=\"img/{$filmler["0"]["resim"]}\">" ?>
-                        </div>
-                        <div class="col-9">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <a href="<?php echo createUrl($filmler["0"]["baslik"]); ?>" style="text-decoration: none; color: inherit;"><?php echo $filmler["0"]["baslik"]; ?></a>
-                                </h5>
-                                <p class="card-text">
-                                    <?php echo formatAciklama($filmler["0"]["aciklama"]); ?>
-                                </p>
-                                <div>
-                                    <span class="badge bg-success">Yapım Tarihi: 03.12.2021</span>
-                                    <span class="badge bg-success"><?php echo $filmler["0"]["yorumSayisi"]; ?></span>
-                                    <span class="badge bg-success"><?php echo $filmler["0"]["begeniSayisi"]; ?></span>
-                                    <span class="badge bg-success"><?php echo $filmler["0"]["vizyon"]; ?></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <?php
+                }
+                ?>
             </div>
         </div>
     </div>
